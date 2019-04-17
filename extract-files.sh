@@ -65,11 +65,6 @@ function blob_fixup() {
 	vendor/etc/permissions/qti_libpermissions.xml)
 		sed -i -e 's|name=\"android.hidl.manager-V1.0-java|name=\"android.hidl.manager@1.0-java|g' "${2}"
 		;;
-
-	# Hax libaudcal.so to store acdbdata in new path
-	vendor/lib/libaudcal.so | vendor/lib64/libaudcal.so)
-		sed -i -e 's|\/data\/vendor\/misc\/audio\/acdbdata\/delta\/|\/data\/vendor\/audio\/acdbdata\/delta\/\x00\x00\x00\x00\x00|g' "${2}"
-		;;
 	esac
 }
 
