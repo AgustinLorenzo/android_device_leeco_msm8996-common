@@ -1,0 +1,49 @@
+# Profile - WIP
+
+# Default
+on property:thermal.profile=0
+     write /sys/devices/soc/${ro.boot.bootdevice}/clkscale_enable 1
+     write /sys/devices/soc/${ro.boot.bootdevice}/clkgate_enable 1
+     write /sys/devices/soc/${ro.boot.bootdevice}/${ro.boot.bootdevice}:ufs_variant/pm_qos_enable 1
+     write /sys/module/lpm_levels/parameters/sleep_disabled "N"
+     write /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk 1
+     write /sys/module/workqueue/parameters/power_efficient "Y"
+     write /sys/kernel/sched/gentle_fair_sleepers 1
+     write /sys/kernel/sched/arch_power 1
+	 write /sys/module/printk/parameters/console_suspend "Y"
+
+# Dialer
+on property:thermal.profile=8
+    # WIP
+
+# Game
+on property:thermal.profile=9
+    # WIP
+
+# Perfomance
+on property:thermal.profile=10
+    write /sys/devices/soc/${ro.boot.bootdevice}/clkscale_enable 0
+    write /sys/devices/soc/${ro.boot.bootdevice}/clkgate_enable 0
+    write /sys/devices/soc/${ro.boot.bootdevice}/${ro.boot.bootdevice}:ufs_variant/pm_qos_enable 0
+    write /sys/module/lpm_levels/parameters/sleep_disabled "Y"
+    write /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk 0
+    write /sys/module/workqueue/parameters/power_efficient "N"
+    write /sys/kernel/sched/gentle_fair_sleepers 0
+    write /sys/kernel/sched/arch_power 0
+    write /sys/module/printk/parameters/console_suspend "N"
+
+# Browser
+on property:thermal.profile=11
+    # WIP
+
+# Camera
+on property:thermal.profile=12
+    # WIP
+
+# PUBG
+on property:thermal.profile=13
+    # WIP
+
+# Video
+on property:thermal.profile=14
+    # WIP
