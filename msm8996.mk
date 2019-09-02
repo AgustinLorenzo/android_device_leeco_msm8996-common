@@ -22,7 +22,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_m.mk)
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-aosip
+    $(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_ENFORCE_RRO_TARGETS := framework-res
 
@@ -173,6 +173,10 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.1 \
     vendor.display.config@1.1_vendor
 
+# Doze mode
+PRODUCT_PACKAGES += \
+    Doze
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
@@ -239,6 +243,10 @@ PRODUCT_PACKAGES += \
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.leeco_8996
+
+# Lineage hardware
+PRODUCT_PACKAGES += \
+    vendor.lineage.touch@1.0-service.leeco_8996
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
@@ -356,6 +364,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
+
+# Trust HAL
+PRODUCT_PACKAGES += \
+    vendor.lineage.trust@1.0-service
 
 # USB
 PRODUCT_PACKAGES += \
