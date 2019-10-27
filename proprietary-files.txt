@@ -2,6 +2,7 @@
 vendor/bin/adsprpcd|ef200e3bce4429fd9461c74330a003f069ffd5b3
 vendor/lib64/libadsprpc.so|784c6e95270dbf2a62f481cc91493b94db8fb56c
 vendor/lib64/libadsp_default_listener.so|bddcdb6aa9efa39f12fc830fc54d42d8e45409dd
+vendor/lib64/libcdsprpc.so|848f300ded859a5b4ad2422b1048ee910c76edf6
 vendor/lib64/libfastcvadsp_stub.so|e25929713605e70417dee54b362b98d04a860f47
 vendor/lib64/libfastcvopt.so|d3fde4207c495781d456a1cd10b338ce6ff790b5
 vendor/lib64/libmdsprpc.so|cb7a68fce69362b0ef5c848818516bf9f16cad8c
@@ -9,6 +10,7 @@ vendor/lib/libadsprpc.so|336ed994eb455e7473641b3f35e0d9d2f99482c3
 vendor/lib/libadsp_default_listener.so|58d05c4794c6ceb7b59e332c909a79ab528a4f31
 vendor/lib/libadsp_hvx_callback_skel.so|b7e47d8d0c011caea30daf974de81eb01bb90268
 vendor/lib/libadsp_hvx_stub.so|5842e47b5929e15c8b63f1aa4795ca3432debebb
+vendor/lib/libcdsprpc.so|8f5fe2c36576977f46584fb5fe8f2b517990673d
 vendor/lib/libfastcvadsp_stub.so|6b50fd7d53811b51e06fedd87c12a794d0c2f645
 vendor/lib/libfastcvopt.so|4954e60822bb3aad56525d5292cac3eb938169da
 vendor/lib/libmdsprpc.so|918dcaef9cf7adbda48f5dae44d037510190785f
@@ -34,40 +36,17 @@ vendor/lib/rfsa/adsp/libvpp_frc.so|d0e36fe8d0bafa4848823fd0186212e58f88084c
 vendor/lib/rfsa/adsp/libvpp_svc_skel.so|c2852313b59cc4b2a002acf6081feaa1f6435154
 vendor/lib/rfsa/adsp/us-syncproximity.so|136ec0bae527f7fc81a18f8bf42526219b1bd480
 
-# Audio - Gemini 8.0.0/OPR1.170623.032/8.9.13
-etc/permissions/audiosphere.xml
-framework/audiosphere.jar
-vendor/lib/libacdb-fts.so
-vendor/lib/libacdbmapper.so
-vendor/lib/libacdbrtac.so
-vendor/lib/libadiertac.so
-vendor/lib/libadm.so
-vendor/lib/libaudcal.so
-vendor/lib/libaudioalsa.so
-vendor/lib/libmdsprpc.so
-vendor/lib/libqtigef.so
-vendor/lib/soundfx/libasphere.so
-vendor/lib/soundfx/libqcbassboost.so
-vendor/lib/soundfx/libqcreverb.so
-vendor/lib/soundfx/libqcvirt.so
-vendor/lib/soundfx/libshoebox.so
-vendor/lib64/libacdb-fts.so
-vendor/lib64/libacdbmapper.so
-vendor/lib64/libacdbrtac.so
-vendor/lib64/libadiertac.so
-vendor/lib64/libaudcal.so
-vendor/lib64/libaudioalsa.so
-vendor/lib64/libmdsprpc.so
-vendor/lib64/libqtigef.so
-vendor/lib64/soundfx/libasphere.so
-vendor/lib64/soundfx/libqcbassboost.so
-vendor/lib64/soundfx/libqcreverb.so
-vendor/lib64/soundfx/libqcvirt.so
-vendor/lib64/soundfx/libshoebox.so
-
-# Audio (acdbloader) - from zl1
-vendor/lib/libacdbloader.so|034a5cf03cccfb22e415832c7d6a043dc52d98c0
-vendor/lib64/libacdbloader.so|33b45951c3098715b33bc1ab3ca606aa99fc2248
+# Audio - from LA.UM.7.5.r1-04800-8x96.0
+vendor/lib/libacdb-fts.so|4f86d94582dd5134dbcf7b23e3963a5f3e0a680a
+vendor/lib/libacdbloader.so|ef0eff0ed0ee84183a19872a7780230b5f0a7d9b
+vendor/lib/libacdbrtac.so|4ca5d96caf61eb2b4967d1dd3dfde78a19bfbf21
+vendor/lib/libadiertac.so|ec9424b67a596c05286419b9c6e6d7d45d04049b
+vendor/lib/libadm.so|bd574dd1f10937386df3626e2ed9d4de7d5d8ba3
+vendor/lib/libaudcal.so|f8c246cf6247583386ce51f37ee9ed071a93f311
+vendor/lib/libqtigef.so|55712edf0c48a7d0d75e26f46bf61b7e5c6d80d5
+vendor/lib/soundfx/libqcbassboost.so|7c5077685b55a57d9e73e919226186111a54ee25
+vendor/lib/soundfx/libqcreverb.so|1214ae277219a471e2f2d9cc5420ee56ff15a139
+vendor/lib/soundfx/libqcvirt.so|f484f70f34edfe8b304e85a842521841f02738ee
 
 # Bluetooth - from LA.UM.7.5.r1-04800-8x96.0
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|70d45813c07050fc19969db8a1dcef32432ce62e
@@ -335,19 +314,11 @@ vendor/lib64/libdpmqmihal.so|ac1f40e3fa18ae56b1842d98d0f44579063b7fd3
 
 # DRM and SEE - from LA.UM.7.5.r1-04800-8x96.0
 vendor/bin/qseecomd|191536bdf3d72238ea7b3ca54b4289b7a09b4bcd
-vendor/lib64/libGPreqcancel.so|db98eea9ef308792e3b9d48b933b5a5debf1af9e
-vendor/lib64/libGPreqcancel_svc.so|1059a83dda327cae9abc10bda0b8a8c526b9760d
 vendor/lib64/libQSEEComAPI.so|c2562b6f2b6e9e2a30c72f0638ae0c16365c0022
-vendor/lib64/libSecureUILib.so|5c9a1e16311a475ff79a1ae541b73216c7096d55
-vendor/lib64/libStDrvInt.so|768602d8b0c04ff8d09ebcf010c19ccb589dc4a7
 vendor/lib64/libdrmfs.so|87526b8b660fc8c27f0c07f1ac2d0d36544ae624
 vendor/lib64/libdrmtime.so|110b8a263128288b056183ba064b0ab2f6343fab
-vendor/lib64/libqisl.so|1f1523c03daffa9e1cd45d96d212d2fa8c1b5790
 vendor/lib64/librpmb.so|9f88e88cd8155b69a085548a60a15c5b5be70f48
-vendor/lib64/libsecureui.so|faebf24607e983faa09d27df36408dab2db2217e
-vendor/lib64/libsecureui_svcsock.so|52dcb894e9061438522dd22fa2e3d7efc708fade
 vendor/lib64/libssd.so|a3b4f5c81b96966f8d2a1a2f8518522f223e73fb
-vendor/lib/libQSEEComAPI.so|ca74ebd4225afbb8fd02ea72cd0c04303da9c2f2
 
 # DRM (Widevine) - from daisy 9/PKQ1.180917.001/V10.0.7.0.PDLMIXM
 vendor/bin/hw/android.hardware.drm@1.1-service.widevine|9743c4ecd0fb8773795bcbfbb406f25616c04129
@@ -356,7 +327,6 @@ vendor/lib64/libwvhidl.so|2ddd2b76f1f16fd1a885fd6ee41c970928f25c3e
 
 # Gatekeeper - from LA.UM.7.5.r1-04800-8x96.0
 vendor/lib64/hw/gatekeeper.msm8996.so|d324fd57026ac20409c474cfc4e15595aa9d4738
-vendor/lib/hw/gatekeeper.msm8996.so|a1e3756cb6e42f869ae1997028eaa9159478525b
 
 # GPS - from daisy 9/PKQ1.180917.001/V10.0.7.0.PDLMIXM
 lib64/vendor.qti.gnss@1.0.so|4dfa66f66b406c1aff3d32bb44382898beaaa39a
@@ -508,7 +478,6 @@ vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so
 
 # Keystore - from LA.UM.7.5.r1-04800-8x96.0
 vendor/lib64/hw/keystore.msm8996.so|e4139ac911fd0aafa73bd2901ab273c04c99ccc9
-vendor/lib/hw/keystore.msm8996.so|89131975b593a2d3551808f950905c3b83bb6d73
 
 # Media - from LA.UM.7.5.r1-04800-8x96.0
 vendor/lib64/libgpustats.so|1a091475fb4a744f091bec101a51044fb8854a15
@@ -531,9 +500,6 @@ vendor/lib/libvpplibrary.so|9dd0fc6eaf467974e99fb1de519303d051694d06
 vendor/lib/libvpphvx.so|f9e3229d44ad22e808ee7ed4d8d1c529195ed6a9
 vendor/lib/libvqzip.so|0b906db131e99cd5460b8a72d05e86721243de95
 
-# Offline charger - from x2
-vendor/bin/charger|0a3861fd5b997337a40926e7ddb2829461cfded8
-
 # Perf - from LA.UM.7.5.r1-04800-8x96.0
 vendor/bin/energy-awareness|3f1aa4d518ff361aa3ed9e41ace3e16d36cf0bbe
 vendor/bin/msm_irqbalance|e70694e0412052cd591389b8c1bf4573e5777257
@@ -547,7 +513,7 @@ vendor/etc/perf/perf-profile3.conf|3a1edfaeaf087effcadba7c652737ab6dd2d87b5
 vendor/etc/perf/perf-profile4.conf|0bc4779472306b1b225e9fc9be40af54e14e2266
 vendor/etc/perf/perf-profile5.conf|5bc85ed4a0f3cedd57e1e046416f423a83dc4f63
 vendor/etc/perf/perf-profile6.conf|910a193b8425bbe0080f746d6788e66986b2e762
-vendor/etc/perf/perfboostsconfig.xml|0375943bddf4b58b4561dd1d2d149ce1c2b373c6
+vendor/etc/perf/perfboostsconfig.xml|03995c6cb20440b8af226b0930d542b3a4257947
 vendor/etc/perf/targetconfig.xml|b2ea39d05d52364774dbd390732cb5f29ae14941
 vendor/etc/perf/targetresourceconfigs.xml|478715f7bcb07e08e62be023ac0b6302ef65bdb3
 vendor/lib64/libperfgluelayer.so|4dec1bd5b511e5c6e1d87bb92a0f02944897bb73
@@ -710,13 +676,6 @@ vendor/bin/time_daemon|385c449770ee3f1d15bf7c5994e8c2fde9b91ba3
 vendor/lib/libtime_genoff.so|95a43a2a19f57d5bd8821f80f51061c7305faeb5
 vendor/lib64/libtime_genoff.so|d0fc4808b859d36b4b545a0219c8fb8d1ea3203a
 
-# TUI - from LA.UM.7.5.r1-04800-8x96.0
-lib/vendor.qti.hardware.tui_comm@1.0.so|df42c8c69f67adeecd682a3035bf8d2b5834cd25
-lib64/vendor.qti.hardware.tui_comm@1.0.so|5a794cd2180fc27d7a03d990e852f6600daf4b7f
-vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|924a815c5d1be0d821af10b9b11093a517f5e72f
-vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
-vendor/lib/vendor.qti.hardware.tui_comm@1.0.so|df42c8c69f67adeecd682a3035bf8d2b5834cd25
-vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|5a794cd2180fc27d7a03d990e852f6600daf4b7f
 # WiFi Display - from LA.UM.7.5.r1-04800-8x96.0
 bin/wfdservice|edeb291221024401cbae69c2fa4e58733b7efc4c
 etc/init/wfdservice.rc|311bfdd1675e56499662f39455536b75b78477bb
